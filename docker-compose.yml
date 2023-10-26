@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password123
+      
+  adminer:
+    image: adminer
+    restart: always
+    container_name: adminer
+    ports:
+      - 6501:8080
